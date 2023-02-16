@@ -1,0 +1,109 @@
+response,class
+passaa,accept
+sopii,accept
+Kyllä sopii,accept
+tuo aika sopii minulle,accept
+Juu sopii hyvin,accept
+tulen silloin,accept
+kyllä passaa,accept
+Kyllä pääsen tuolloin,accept
+kyllä pääsisin,accept
+kyllä varmaankin sopii,accept
+"Kyllä, sopii minulle.",accept
+Sopii hyvin.,accept
+"Ei ongelmaa, sopii minulle.",accept
+Sopii minulle täydellisesti.,accept
+Ilmoittaudun mielelläni.,accept
+"Ei ole ongelmaa, olen mukana.",accept
+"Joo, sopii minulle.",accept
+"Olen mukana, kiitos kutsusta.",accept
+Ilmoitan läsnäolostani.,accept
+"Sopii minulle, kiitos kutsusta.",accept
+Olen mukana tapaamisessa.,accept
+"Sopii hyvin, ilmoittaudun mielelläni.",accept
+"Ei ole ongelmaa, olen mukana tapaamisessa.",accept
+"Sopii minulle täydellisesti, kiitos kutsusta.",accept
+Olen iloinen voidessani osallistua.,accept
+"Sopii hyvin, ilmoitan läsnäolostani.",accept
+"Olen mukana tapaamisessa, kiitos mahdollisuudesta.",accept
+"Ei ole ongelmaa, olen iloinen voidessani osallistua.",accept
+"Sopii minulle, ilmoittaudun mielelläni.",accept
+"Olen mukana tapaamisessa, ilmoitan osallistumisestani.",accept
+"Sopii hyvin, olen iloinen voidessani osallistua.",accept
+"Ei ole ongelmaa, ilmoittaudun mielelläni.",accept
+"Olen mukana tapaamisessa, kiitos mahdollisuudesta.",accept
+"Sopii minulle, ilmoitan osallistumisestani.",accept
+"Ei ole ongelmaa, olen mukana tapaamisessa.",accept
+"Sopii hyvin, ilmoittaudun mielelläni.",accept
+ei passaa,decline
+ei sovi,decline
+Ei käy tuolloin,decline
+minulla on muita menoja,decline
+Ei sovi,decline
+Ei,decline
+En pääse tuolloin,decline
+en pääse,decline
+Valitettavasti en voi osallistua.,decline
+En pysty osallistumaan.,decline
+En voi osallistua tuona päivänä.,decline
+En pysty olemaan paikalla.,decline
+En ole sopiva tapaamiseen.,decline
+En ole tarpeeksi vapaa tuona päivänä.,decline
+En pysty olemaan paikalla silloin.,decline
+En ole saatavilla tuona päivänä.,decline
+En pysty osallistumaan tapaamiseen.,decline
+En ole tarpeeksi vapaa tapaamiseen.,decline
+En pysty olemaan paikalla tapaamisessa.,decline
+En ole sopiva tapaamiseen tuona päivänä.,decline
+En pysty osallistumaan silloin.,decline
+En ole saatavilla tapaamiseen.,decline
+"En pysty olemaan paikalla silloin, valitettavasti.",decline
+En ole tarpeeksi vapaa osallistuakseni.,decline
+En ole sopiva tapaamiseen tuona ajankohtana.,decline
+"En pysty osallistumaan silloin, kiitos ymmärryksestäsi.",decline
+"En ole saatavilla tuona päivänä, valitettavasti.",decline
+En ole tarpeeksi vapaa tapaamiseen silloin.,decline
+En ole sopiva tapaamiseen tuona aikana.,decline
+En pysty olemaan paikalla tuona päivänä.,decline
+En ole saatavilla tapaamiseen tuona päivänä.,decline
+"En pysty osallistumaan silloin, kiitos ymmärryksestäsi.",decline
+"En ole tarpeeksi vapaa tuona päivänä, valitettavasti.",decline
+En ole sopiva tapaamiseen silloin.,decline
+En pysty olemaan paikalla tapaamisessa silloin.,decline
+En ole tarpeeksi vapaa tapaamiseen tuona aikana.,decline
+"En ole sopiva tapaamiseen silloin, kiitos ymmärryksestäsi.",decline
+"En pysty olemaan paikalla silloin, valitettavasti.",decline
+En ole saatavilla tuona ajankohtana.,decline
+En pysty osallistumaan tapaamiseen silloin.,decline
+"En ole tarpeeksi vapaa tuona päivänä, kiitos ymmärryksestäsi.",decline
+"En ole sopiva tapaamiseen tuona ajankohtana, valitettavasti.",decline
+"En pysty olemaan paikalla silloin, kiitos ymmärryksestäsi.",decline
+En ole saatavilla tapaamiseen silloin.,decline
+"En pysty osallistumaan tuona päivänä, valitettavasti.",decline
+"Ei sovi, miten olisi ensi viikolla",suggestion
+onko 31.12 vapaita aikoja?,suggestion
+Milloin muulloin olisi vapaita aikoja?,suggestion
+"En pääse tuolloin, mitenkäs maanantaina?",suggestion
+Olisiko edeltävänä päivänä vapaita aikoja?,suggestion
+Valitettavasti en voi osallistua 13.2.2023.,suggestion
+Voinko ehdotaa toista ajankohtaa?,suggestion
+"En voi osallistua tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty olemaan paikalla 13.2.2023, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole sopiva tapaamiseen 13.2.2023, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty olemaan paikalla silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole saatavilla tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty osallistumaan silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole tarpeeksi vapaa tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole sopiva tapaamiseen tuona ajankohtana, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty olemaan paikalla tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole saatavilla tapaamiseen tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty osallistumaan silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole tarpeeksi vapaa tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole sopiva tapaamiseen silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty olemaan paikalla tapaamisessa silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole tarpeeksi vapaa tapaamiseen tuona aikana, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole sopiva tapaamiseen silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty olemaan paikalla silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole saatavilla tuona ajankohtana, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En pysty osallistumaan tapaamiseen silloin, voisimmeko sopia toisesta ajankohdasta?",suggestion
+"En ole tarpeeksi vapaa tuona päivänä, voisimmeko sopia toisesta ajankohdasta?",suggestion
