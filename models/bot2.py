@@ -2,13 +2,14 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras import utils
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
+
+from keras import utils
+from keras.preprocessing.text import Tokenizer
+from keras.models import Sequential
+from keras.layers import Embedding, LSTM, Dense, Dropout
 
 df = pd.read_csv("responses.csv")
 #df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
@@ -34,8 +35,8 @@ x_test_seq = tokenizer.texts_to_sequences(list(x_test))
 MAX_SEQ_LEN = 35
 
 #Pad the sequences
-x = pad_sequences(x_seq, maxlen = MAX_SEQ_LEN, padding='post')
-x_test = pad_sequences(x_test_seq, maxlen = MAX_SEQ_LEN, padding='post')
+x = utils.pad_sequences(x_seq, maxlen = MAX_SEQ_LEN, padding='post')
+x_test = utils.pad_sequences(x_test_seq, maxlen = MAX_SEQ_LEN, padding='post')
 
 #Convert labels to one-hot vectors
 y = y_train.to_numpy()
@@ -76,7 +77,7 @@ model.evaluate(x_test, y_test_encoded)
 # This can be used to get prediction
 def getClass(text):
     sequence = tokenizer.texts_to_sequences([text])
-    sequence = pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
+    sequence = utils.pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
     probabilities = model.predict(sequence)
     prediction = probabilities.argmax(axis=-1)
     return encoder.classes_[prediction[0]]
