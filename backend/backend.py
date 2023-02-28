@@ -1,38 +1,28 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask
 app = Flask(__name__)
-#the api takes you direclty to the tensorflow or open ai solution if you wish,
-#or decides itself based on the length of the message
-#http://localhost:5000/api?message=<random marks> takes you to one, based on the amount of marks
-#we added two endpoints for openai and tensorflow as well, to follow the diagram, but they dont account the
-#message yet
-#http://localhost:5000/api?message=tensor takes you to the tensorlow solution
-#http://localhost:5000/api?message=openai takes you to the openai solution
-
-@app.before_request
-def check_url_and_redirect():
-    if request.path[1:] == 'api':
-        if request.args.get('message') == "tensor":
-            return redirect(url_for('tensorflow'))
-        elif request.args.get('message') == "openai":
-            return redirect(url_for('openai'))
-#if the message has over 20 marks, it goes to openai
-        if(len(request.args.get('message'))<20):
-            return redirect(url_for('tensorflow'))
-        else:
-            return redirect(url_for('openai'))
-
 
 @app.route("/")
 def hello():
-    return "please input a message!"
+    return "Use /classify-1/[your message], /classify-2/[your message] or /classify-3/[your message] to get an answer from the prototype "
 
-@app.route("/tensorflow")
-def tensorflow():
-    return "tensori"
+@app.route("/classify-1/<msg>", methods=['GET', 'POST'])
+def tensorflow(msg):
+    #result = lassis_genius_bot(message)
+    return "from api 1 (tensorflow) with " + msg
 
-@app.route("/openai")
-def openai():
-    return "ouppeni"
+@app.route("/classify-2/<msg>", methods=['GET', 'POST'])
+def combo(msg):
+    if(len(msg)<20):
+        #result = lassis_genius_bot(msg)
+        return "from api 2 (tensorflow) with " + msg
+    
+    #result = ermyas_genius_bot(msg)
+    return "from api 2 (open ai) with " + msg
+
+@app.route("/classify-3/<msg>", methods=['GET', 'POST'])
+def openai(msg):
+    #result = ermyas_genius_bot(msg)
+    return "from api 3 (openai) with " + msg
 
 
 if __name__ == "__main__":
