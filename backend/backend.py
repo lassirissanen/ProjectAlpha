@@ -1,4 +1,6 @@
 from flask import Flask, request
+from open_ai_classifier import open_ai_classifier
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -34,7 +36,7 @@ def openai():
     #msg = request.get_json()['message'] #This receives JSON format
     if msg is not None:
         #result = ermyas_genius_bot(msg)
-        return "from API 3 (openAI) with a message: " + msg 
+        return open_ai_classifier(msg)
     else:
         return "No message provided"
 
