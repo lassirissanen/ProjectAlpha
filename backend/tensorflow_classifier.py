@@ -11,7 +11,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.models import Sequential
 from keras.layers import Embedding, LSTM, Dense, Dropout
 
-df = pd.read_csv("responses.csv")
+df = pd.read_csv("./responses.csv")
 #df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
 #df = df.drop(["class"], axis=1)
 
@@ -75,9 +75,10 @@ lstm_history = model.fit(x, y_train_encoded, batch_size = BATCH_SIZE, epochs = E
 model.evaluate(x_test, y_test_encoded)
 
 # This can be used to get prediction
-def getClass(text):
+def tensorflow_classifier(text):
     sequence = tokenizer.texts_to_sequences([text])
     sequence = utils.pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
     probabilities = model.predict(sequence)
+    print(probabilities)
     prediction = probabilities.argmax(axis=-1)
     return encoder.classes_[prediction[0]]
