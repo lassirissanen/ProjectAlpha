@@ -1,5 +1,6 @@
 from flask import Flask, request
 from open_ai_classifier import open_ai_classifier
+from tensorflow_classifier import tensorflow_classifier
 
 app = Flask(__name__)
 
@@ -12,8 +13,7 @@ def tensorflow():
     msg = request.form.get('message') #This receives texts
     #msg = request.get_json()['message'] #This receives JSON format
     if msg is not None:
-        #result = lassis_genius_bot(message)
-        return "from API 1 (tensorflow) with a message: " + msg 
+        return tensorflow_classifier(msg)
     else:
         return "No message provided"
 
