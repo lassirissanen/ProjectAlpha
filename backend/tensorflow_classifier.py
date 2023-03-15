@@ -90,7 +90,9 @@ def tensorflow_test_model(text, prob_margin):
     probabilities = model.predict(sequence)
     prediction = probabilities.argmax(axis=-1)
     intent_class = encoder.classes_[prediction[0]] if probabilities.max() > prob_margin else "unknown"
+    classification_verdict = "success" if intent_class != "unknown" else "failure"
     data = {
+        "verdict": classification_verdict,
         "class": intent_class,
         "classification_probability": probabilities.max(),
         "probabilities": list(probabilities),
