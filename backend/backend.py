@@ -1,8 +1,10 @@
 from flask import Flask, request
+from flask_cors import CORS
 from open_ai_classifier import open_ai_classifier
 from tensorflow_classifier import tensorflow_classifier
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
