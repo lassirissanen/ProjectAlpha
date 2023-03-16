@@ -79,6 +79,24 @@ def tensorflow_classifier(text):
     sequence = tokenizer.texts_to_sequences([text])
     sequence = utils.pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
     probabilities = model.predict(sequence)
-    print(probabilities)
     prediction = probabilities.argmax(axis=-1)
-    return encoder.classes_[prediction[0]]
+    print(probabilities)
+    intent_class = encoder.classes_[prediction[0]] if probabilities.max() > 0.6 else "unknown"
+    return intent_class
+
+def tensorflow_test_model(text, prob_margin):
+    sequence = tokenizer.texts_to_sequences([text])
+    sequence = utils.pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
+    probabilities = model.predict(sequence)
+    prediction = probabilities.argmax(axis=-1)
+    intent_class = encoder.classes_[prediction[0]] if probabilities.max() > prob_margin else "unknown"
+    classification_verdict = "success" if intent_class != "unknown" else "failure"
+    data = {
+        "verdict": classification_verdict,
+        "class": intent_class,
+        "classification_probability": probabilities.max(),
+        "probabilities": list(probabilities),
+        "database_size": df.size(),
+    }
+    return data
+
