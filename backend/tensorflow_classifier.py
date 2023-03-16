@@ -58,21 +58,27 @@ NUM_UNITS = 32
 NUM_CLASSES = len(df['class'].unique())
 VOCAB_SIZE = len(tokenizer.word_index) + 1
 
-#Define a LSTM model
-model = Sequential()
-model.add(Embedding(input_dim = VOCAB_SIZE, output_dim = EMBEDDING_DIM, input_length = MAX_SEQ_LEN, mask_zero = True))
-model.add(LSTM(NUM_UNITS, activation='relu'))
-model.add(Dense(NUM_UNITS, activation='relu'))
-model.add(Dropout(0.4))
-model.add(Dense(NUM_CLASSES, activation='softmax'))
+model = None
+try:
+    model = tf.keras.models.load_model('models/model_v1')
+except:
 
-#Compile the model
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+    #Define a LSTM model
+    model = Sequential()
+    model.add(Embedding(input_dim = VOCAB_SIZE, output_dim = EMBEDDING_DIM, input_length = MAX_SEQ_LEN, mask_zero = True))
+    model.add(LSTM(NUM_UNITS, activation='relu'))
+    model.add(Dense(NUM_UNITS, activation='relu'))
+    model.add(Dropout(0.4))
+    model.add(Dense(NUM_CLASSES, activation='softmax'))
 
-#Fit the model on training data
-lstm_history = model.fit(x, y_train_encoded, batch_size = BATCH_SIZE, epochs = EPOCHS, verbose = 1, validation_split = VAL_SPLIT)
+    #Compile the model
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.evaluate(x_test, y_test_encoded)
+    #Fit the model on training data
+    lstm_history = model.fit(x, y_train_encoded, batch_size = BATCH_SIZE, epochs = EPOCHS, verbose = 1, validation_split = VAL_SPLIT)
+    model.save('models/model_v1')
+
+    model.evaluate(x_test, y_test_encoded)
 
 # This can be used to get prediction
 def tensorflow_classifier(text):
