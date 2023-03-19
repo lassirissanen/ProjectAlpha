@@ -1,8 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from open_ai_classifier import open_ai_classifier
 from tensorflow_classifier import tensorflow_classifier
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
@@ -10,10 +12,15 @@ def hello():
 
 @app.route("/classify-1", methods=['GET', 'POST'])
 def tensorflow():
-    msg = request.form.get('message') #This receives texts
-    #msg = request.get_json()['message'] #This receives JSON format
+    #msg = request.form.get('message') #This receives texts
+    msg = request.get_json()['message'] #This receives JSON format
+    print(msg)
+    print("Juu")
     if msg is not None:
-        return tensorflow_classifier(msg)
+        data =  {
+            "classification": tensorflow_classifier(msg)
+        }
+        return jsonify(data)
     else:
         return "No message provided"
 
