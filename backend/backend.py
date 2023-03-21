@@ -14,8 +14,6 @@ def hello():
 def tensorflow():
     #msg = request.form.get('message') #This receives texts
     msg = request.get_json()['message'] #This receives JSON format
-    print(msg)
-    print("Juu")
     if msg is not None:
         data =  {
             "classification": tensorflow_classifier(msg)
