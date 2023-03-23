@@ -15,7 +15,7 @@ df = pd.read_csv("./responses.csv")
 #df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
 #df = df.drop(["class"], axis=1)
 
-TEST_SPLIT = 0.2
+TEST_SPLIT = 0.1
 RANDOM_STATE = 10
 np.random.seed(RANDOM_STATE)
 tf.random.set_seed(RANDOM_STATE)
@@ -87,7 +87,7 @@ def tensorflow_classifier(text):
     probabilities = model.predict(sequence)
     prediction = probabilities.argmax(axis=-1)
     print(probabilities)
-    intent_class = encoder.classes_[prediction[0]] if probabilities.max() > 0.6 else "unknown"
+    intent_class = encoder.classes_[prediction[0]] if probabilities.max() > 0.5 else "unknown"
     return intent_class
 
 def tensorflow_test_model(text, prob_margin):
