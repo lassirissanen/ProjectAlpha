@@ -78,6 +78,27 @@ Vahvistan osallistumiseni tähän ajankohtaan.,accept
 "Selvä, tulen paikalle tuolloin.",accept
 "Sopii täydellisesti, kiitos kutsusta.",accept
 Tämä aika käy mainiosti.,accept
+Olen iloinen!, accept
+Tämä on mahtavaa!, accept
+Kiitos!, accept
+Aion olla paikalla!, accept
+Loistavaa!, accept
+Kuulostaa hyvältä!, accept
+Aion olla siellä!, accept
+Ymmärrän!, accept
+Hyvä!, accept
+Aion olla ajoissa!, accept
+Aion olla paikalla ajoissa!, accept
+Hyväksyn!, accept
+Olen valmis!, accept
+Ottaisin mielelläni vastaan!, accept
+Ymmärrän ja hyväksyn!, accept
+Aion olla ajoissa paikalla!, accept
+Hyväksyn ja menen sinne!, accept
+Minulla on varmaan aikaa!, accept
+Hyvä, menen sinne!, accept
+Minulla ei ole mitään vastaan!, accept
+vahvistan, accept
 ei,decline
 ei kyllä,decline
 ei passaa,decline
@@ -169,6 +190,20 @@ kiitos ei,decline
 ei käy,decline
 "kiitos kutsusta, ei kuitenkaan käy",decline
 "Olen pahoillani, mutta minun täytyy kieltäytyä kutsusta terveydellisistä syistä.",decline
+En ole kiinnostunut,decline
+En ole saatavilla,decline
+En halua,decline
+Ei sopiva,decline
+En tarvitse hammastarkastusta,decline
+Ei tällä hetkellä sovi,decline
+En löydä aikaa,decline
+En ole varma,decline
+En ole kiinnostunut tästä,decline
+En ole kiinnostunut osallistumaan,decline
+En ole varma tästä,decline
+En ole kiinnostunut tästä aiheesta,decline
+Olen liian kiireinen,decline
+"Joo, ei tää aika kyllä sovi",decline
 "Ei sovi, miten olisi ensi viikolla",suggestion
 onko 31.12 vapaita aikoja?,suggestion
 Milloin muulloin olisi vapaita aikoja?,suggestion
@@ -236,3 +271,24 @@ Milloin sinulla olisi vapaa hetki tapaamiselle?,suggestion
 "Valitettavasti en voi osallistua, mutta voisimmeko sopia toisen ajan huomiselle",suggestion
 "Pahoittelen, en pääse silloin. Onko mahdollista järjestää tapaaminen toisena päivänä?",suggestion
 Valitettavasti tuo päivä ei sovi. Miten olisi vaikka seuraava viikko? Onko silloin vapaita aikoja?,suggestion
+Voinko vaihtaa toiseen toimipisteeseen?,suggestion
+Voinko tulla seuraavan kerran eri hammaslääkärille?,suggestion
+Voinko tulla aikaisemmin?,suggestion
+Voinko tulla myöhemmin?,suggestion
+Onko mahdollista vaihtaa toiseen päivään?,suggestion
+Olisiko mahdollista saada aika aikaisemmin?,suggestion
+Olisiko mahdollista saada aika myöhemmin?,suggestion
+Voiko aikaa siirtää myöhemmäksi?,suggestion
+Voiko aikaa siirtää aikaisemmaksi?,suggestion
+Voiko aikaa siirtää toiselle viikolle?,suggestion
+Onko ilta-aikoja?,suggestion
+Onko aikoja ensi viikonloppuna?,suggestion
+Onko aikoja viikonloppuisin?,suggestion
+Voitko muuttaa ajan toiseen toimipisteeseen?,suggestion
+Olisiko mahdollista saada aika toiseen toimipisteeseen?,suggestion
+Olisiko mahdollista vaihtaa aika toiselle hammaslääkärille?,suggestion
+Olisiko mahdollista tulla seuraavana viikonloppuna?,suggestion
+Olisiko mahdollista vaihtaa ajankohtaa sopimaan minulle paremmin?,suggestion
+Olisiko mahdollista saada aika toiseen viikkoon?,suggestion
+Voitko muuttaa ajan toiseen toimipisteeseen?,suggestion
+Onko mahdollista vaihtaa toiseen aikaan?,suggestion
