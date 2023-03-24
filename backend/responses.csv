@@ -78,27 +78,27 @@ Vahvistan osallistumiseni tähän ajankohtaan.,accept
 "Selvä, tulen paikalle tuolloin.",accept
 "Sopii täydellisesti, kiitos kutsusta.",accept
 Tämä aika käy mainiosti.,accept
-Olen iloinen!, accept
-Tämä on mahtavaa!, accept
-Kiitos!, accept
-Aion olla paikalla!, accept
-Loistavaa!, accept
-Kuulostaa hyvältä!, accept
-Aion olla siellä!, accept
-Ymmärrän!, accept
-Hyvä!, accept
-Aion olla ajoissa!, accept
-Aion olla paikalla ajoissa!, accept
-Hyväksyn!, accept
-Olen valmis!, accept
-Ottaisin mielelläni vastaan!, accept
-Ymmärrän ja hyväksyn!, accept
-Aion olla ajoissa paikalla!, accept
-Hyväksyn ja menen sinne!, accept
-Minulla on varmaan aikaa!, accept
-Hyvä, menen sinne!, accept
-Minulla ei ole mitään vastaan!, accept
-vahvistan, accept
+Olen iloinen!,accept
+Tämä on mahtavaa!,accept
+Kiitos!,accept
+Aion olla paikalla!,accept
+Loistavaa!,accept
+Kuulostaa hyvältä!,accept
+Aion olla siellä!,accept
+Ymmärrän!,accept
+Hyvä!,accept
+Aion olla ajoissa!,accept
+Aion olla paikalla ajoissa!,accept
+Hyväksyn!,accept
+Olen valmis!,accept
+Ottaisin mielelläni vastaan!,accept
+Ymmärrän ja hyväksyn!,accept
+Aion olla ajoissa paikalla!,accept
+Hyväksyn ja menen sinne!,accept
+Minulla on varmaan aikaa!,accept
+"Hyvä, menen sinne!",accept
+Minulla ei ole mitään vastaan!,accept
+vahvistan,accept
 ei,decline
 ei kyllä,decline
 ei passaa,decline
@@ -281,7 +281,7 @@ Olisiko mahdollista saada aika myöhemmin?,suggestion
 Voiko aikaa siirtää myöhemmäksi?,suggestion
 Voiko aikaa siirtää aikaisemmaksi?,suggestion
 Voiko aikaa siirtää toiselle viikolle?,suggestion
-Onko ilta-aikoja?,suggestion
+"Onko ilta-aikoja?",suggestion
 Onko aikoja ensi viikonloppuna?,suggestion
 Onko aikoja viikonloppuisin?,suggestion
 Voitko muuttaa ajan toiseen toimipisteeseen?,suggestion
