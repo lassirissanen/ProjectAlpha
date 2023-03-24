@@ -101,8 +101,7 @@ def tensorflow_test_model(text, prob_margin):
         "verdict": classification_verdict,
         "class": intent_class,
         "classification_probability": probabilities.max(),
-        "probabilities": list(probabilities),
-        "database_size": df.size(),
+        "probabilities": list(probabilities)
     }
     return data
 

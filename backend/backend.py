@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from open_ai_classifier import open_ai_classifier
 from tensorflow_classifier import tensorflow_classifier
+from tensorflow_classifier import tensorflow_test_model
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -15,8 +16,12 @@ def tensorflow():
     #msg = request.form.get('message') #This receives texts
     msg = request.get_json()['message'] #This receives JSON format
     if msg is not None:
+        #prob_margin is hard coded for now
+        knowledge = tensorflow_test_model(msg, 0.2)
+        printable = knowledge["class"], " with a probability of ", str(knowledge["classification_probability"])
+        print(printable)
         data =  {
-            "classification": tensorflow_classifier(msg)
+            "classification": printable
         }
         return jsonify(data)
     else:
