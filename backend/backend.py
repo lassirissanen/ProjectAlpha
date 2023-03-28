@@ -27,14 +27,17 @@ def combo():
     #msg = request.form.get('message') #This receives texts
     msg = request.get_json()['message'] #This receives JSON format
     if msg is not None:
-        if (len(msg) < 20):
+        res = tensorflow_classifier(msg)
+        if res != "unknown":
             #result = lassis_genius_bot(msg)
             data = {
-                "classification": "from API 2 (tensorflow) with a message: " + msg,
+                "classification": res
             }
             return jsonify(data)
-        #result = ermyas_genius_bot(msg)
-        return "from API 2 (openAI) with a message: " + msg
+        data = {
+                "classification": open_ai_classifier(msg)
+            }
+        return jsonify(data)
     else:
         return "No message provided"
 
