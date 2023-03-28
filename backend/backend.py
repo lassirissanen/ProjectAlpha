@@ -18,10 +18,17 @@ def tensorflow():
     if msg is not None:
         #prob_margin is hard coded for now
         knowledge = tensorflow_test_model(msg, 0.2)
-        printable = knowledge["class"], " with a probability of ", str(knowledge["classification_probability"])
-        print(printable)
+        percent = knowledge["classification_probability"] * 100
+        list = knowledge["probabilities"]
+        probs = ""
+        for i in list:
+            probs +=str(i)
+        print(probs)
         data =  {
-            "classification": printable
+            "verdict": knowledge["verdict"],
+            "class": knowledge["class"],
+            "classification_probability": str(round(percent, 2)),
+            "probabilities": probs
         }
         return jsonify(data)
     else:
