@@ -14,6 +14,7 @@ def hello():
 @app.route("/classify-1", methods=['GET', 'POST'])
 def tensorflow():
     msg = request.get_json()['message'] #This receives JSON format
+    print(msg)
     if msg is not None:
         #prob_margin is hard coded for now
         knowledge = tensorflow_test_model(msg, 0.2)

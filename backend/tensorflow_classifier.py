@@ -1,17 +1,25 @@
 # https://medium.com/holler-developers/intent-detection-using-sequence-models-ddae9cd861ee
+
+# base class imports 
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import io
 
+# sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
+# keras
 from keras import utils
 from keras.preprocessing.text import Tokenizer
 from keras.models import Sequential
 from keras.layers import Embedding, LSTM, Dense, Dropout
 
-df = pd.read_csv("./responses.csv")
+# lemmatizer import
+from lemmatizer import database_lemmatization, response_lemmatization
+
+df = pd.read_csv('output.csv')
 #df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
 #df = df.drop(["class"], axis=1)
 
@@ -91,7 +99,8 @@ def tensorflow_classifier(text):
     return intent_class
 
 def tensorflow_test_model(text, prob_margin):
-    sequence = tokenizer.texts_to_sequences([text])
+    lemmatized_text = response_lemmatization(text)
+    sequence = tokenizer.texts_to_sequences([lemmatized_text])
     sequence = utils.pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding="post")
     probabilities = model.predict(sequence)
     prediction = probabilities.argmax(axis=-1)
