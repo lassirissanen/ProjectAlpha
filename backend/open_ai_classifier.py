@@ -1,6 +1,6 @@
 import openai
 import re
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def open_ai_classifier(response_text):
