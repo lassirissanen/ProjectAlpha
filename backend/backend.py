@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flasgger import Swagger, swag_from
+from flasgger import Swagger
 from open_ai_classifier import open_ai_classifier
 from tensorflow_classifier import tensorflow_classifier
 from tensorflow_classifier import tensorflow_test_model
@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-swagger = Swagger(app, template_file="./static/class1.yaml")
+swagger = Swagger(app, template_file="./documentation/api-doc.yaml")
 
 @app.route("/")
 def hello():
