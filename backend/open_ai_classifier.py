@@ -36,56 +36,62 @@ Gets suggested time from response
 @param original_suggestion: The original suggestion sent to customer
 @param response_text: The response from customer
 
-@return object like {'date': '04.04.2023', 'from': '00:00', 'to': '24:00, 'status': 'success | failed'}
+@return object like {'from': 'dd.mm.YYYY-hh:mm', 'to': 'dd.mm.YYYY-hh:mm', 'status': 'success | failed' }
 '''
 def deduce_time(response_text, original_suggestion):
     today = datetime.date.today()
 
     # Next weeks wednesday
-    days_to_wednesday = (2 - today.weekday()) % 7 + 7 # 2 represents Wednesday, 7 represents number of days in a week
+    days_to_monday = (6 - today.weekday()) + 1
+    days_to_wednesday = (6 - today.weekday()) + 3
+    days_to_sunday = (6 - today.weekday()) + 7
+    next_monday = today + datetime.timedelta(days=days_to_monday)
     next_wednesday = today + datetime.timedelta(days=days_to_wednesday)
+    next_sunday = today + datetime.timedelta(days=days_to_sunday)
 
     # Format the date as "Monday X Month YYYY"
     formatted_today = today.strftime("%A %d %B %Y")
+    formatted_next_monday = next_monday.strftime("%d %B %Y")
     formatted_next_wednesday = next_wednesday.strftime("%d %B %Y")
+    formatted_next_sunday = next_sunday.strftime("%d %B %Y")
 
     p = f"""
     suggestion: "{original_suggestion}"
 
-    The suggestion is in finnish. Given that today is {formatted_today}, infer any dates mentioned in the following responses to the before mentioned suggestion:
+    The suggestion is in finnish. Given that today is {formatted_today}, infer any time frames mentioned in the following responses to the before mentioned suggestion:
 
-    text: Ensi keskiviikkona sopisi hyvin
-    date: {formatted_next_wednesday}, 00:00-24:00
+    text: Ensi maanantaina sopisi hyvin
+    time: {formatted_next_monday}, 00:00 to {formatted_next_monday}, 23:59
 
-    text:  {response_text}
-    date: """
+    text: Ensi viikolla keskiviikosta eteen päin kävisi
+    time: {formatted_next_wednesday}, 00:00 to {formatted_next_sunday}, 23:59
+
+    text: {response_text}
+    time: """
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=p,
-        max_tokens=15,
+        max_tokens=20,
         n=1,
         temperature=0.1,
     )
 
     result = response.choices[0].text
     try:
-        [datestr, timestr] = result.split(",")
-        datestr = datestr.strip()
-        timestr = timestr.strip()
-        date_obj = datetime.datetime.strptime(datestr, "%d %B %Y")
-        #time_pattern = re.compile(r'^\d{2}:\d{2}$')
-        [time_from, time_to] = timestr.split("-")
+        [from_time, to_time] = result.split(" to ")
+        from_time = from_time.strip()
+        to_time = to_time.strip()
+        from_date_obj = datetime.datetime.strptime(from_time, "%d %B %Y, %H:%M")
+        to_date_obj = datetime.datetime.strptime(to_time, "%d %B %Y, %H:%M")
         suggestion_obj = {
-            "date": date_obj.strftime("%d.%m.%Y"),
-            "from": time_from,
-            "to": time_to,
+            "from": from_date_obj.strftime("%d.%m.%Y-%H:%M"),
+            "to": to_date_obj.strftime("%d.%m.%Y-%H:%M"),
             "status": "success"
         }
         return suggestion_obj
     except:
         print(f"OpenAI returned unexpected result:'{result}' in open_ai_classifier.getTime")
     return {
-        "date": "-",
         "from": "-",
         "to": "-",
         "status": "failed" 
