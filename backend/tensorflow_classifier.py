@@ -19,7 +19,7 @@ from keras.layers import Embedding, LSTM, Dense, Dropout
 # lemmatizer import
 from lemmatizer import database_lemmatization, response_lemmatization
 
-df = pd.read_csv('output.csv')
+df = pd.read_csv(database_lemmatization('responses.csv'))
 #df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
 #df = df.drop(["class"], axis=1)
 
