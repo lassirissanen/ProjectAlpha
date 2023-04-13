@@ -1,0 +1,294 @@
+response,class
+passata,accept
+sopia,accept
+kyllä,accept
+käydä,accept
+käydä,accept
+kyllä sopia,accept
+tuo aika sopia minä,accept
+juu sopia hyvin,accept
+tuli silloin,accept
+kyllä passata,accept
+kyllä päästä tuolloin,accept
+kyllä päästä,accept
+kyllä varma sopia,accept
+"Kyllä, sopia minulle.",accept
+sopia hyvin.,accept
+"ei ongelmaa, sopia minulle.",accept
+sopia minä täydellisesti.,accept
+ilmoittautua mielelläni.,accept
+"ei olla ongelmaa, olla mukana.",accept
+"Joo, sopia minulle.",accept
+"olla mukana, kiitos kutsusta.",accept
+ilmoittaa läsnäolostani.,accept
+"sopia minulle, kiitos kutsusta.",accept
+olla mukaan tapaamisessa.,accept
+"sopia hyvin, ilmoittautua mielelläni.",accept
+"ei olla ongelmaa, olla mukaan tapaamisessa.",accept
+"sopia minä täydellisesti, kiitos kutsusta.",accept
+olla iloinen voida osallistua.,accept
+"sopia hyvin, ilmoittaa läsnäolostani.",accept
+"olla mukaan tapaamisessa, kiitos mahdollisuudesta.",accept
+"ei olla ongelmaa, olla iloinen voida osallistua.",accept
+"sopia minulle, ilmoittautua mielelläni.",accept
+"olla mukaan tapaamisessa, ilmoittaa osallistumisestani.",accept
+"sopia hyvin, olla iloinen voida osallistua.",accept
+"ei olla ongelmaa, ilmoittautua mielelläni.",accept
+"olla mukaan tapaamisessa, kiitos mahdollisuudesta.",accept
+"sopia minulle, ilmoittaa osallistumisestani.",accept
+"ei olla ongelmaa, olla mukaan tapaamisessa.",accept
+"sopia hyvin, ilmoittautua mielelläni.",accept
+"kiitos kutsusta, sopia mainiosti.",accept
+"sopia hyvin, ilmoittaa läsnäolostani.",accept
+hyväksyä ehdotettu aika ja tuli mieli paikalle.,accept
+"olla mukaan tapaamisessa, sopia loistavasti!",accept
+"kyllä passaa, ilmoittautua mieli mukaan.",accept
+"sopia minulle, vahvistaa osallistumiseni.",accept
+"kiitos kutsusta, ilmoittaa mieli läsnäolo sovittu aikaan.",accept
+"tämä aika sopia hyvin, tuli paikalle.",accept
+"hyväksyä ehdotettu ajan, ilmoittaa osallistumisestani.",accept
+"sopia minä täydellisesti, ilmoittautua läsnäolostani.",accept
+"Kiitos, olla mukaan tavata sovittu ajassa.",accept
+"sopia loistavasti, kiitos kutsusta!",accept
+"Kyllä, sopia mainiosti. nähdä silloin!",accept
+vahvistaa osallistua sovittu aikaan.,accept
+"sopia minulle, ilmoittautua mukaan.",accept
+"tämä aika käydä hyvin, olla iloinen voida osallistua.",accept
+"hyväksyä ehdotettu ajan, kiitos kutsusta.",accept
+"Kiitos, ilmoittaa läsnäolo sovittu aikana.",accept
+"sovittu aika käydä mainiosti, ilmoittautua mieli mukaan.",accept
+"Kyllä, tuli mieli paikalle.",accept
+"hyväksyä ehdotettu ajan, olla mukaan tapaamisessa.",accept
+"sopia täydellisesti, ilmoittaa läsnäolostani.",accept
+"kiitos kutsusta, tuli tavata sovittu ajankohtana.",accept
+"sopia hyvin, ilmoittaa osallistumisestani.",accept
+"Kyllä, vahvistaa läsnäolo sovittu aikassa.",accept
+ilmoittaa mieli osallistua sovittu ajankohtana.,accept
+"sopia loistavasti, olla mukaan tapaamisessa.",accept
+"tämä aika käydä hyvin, kiitos kutsusta.",accept
+hyväksyä ehdotettu aika ja ilmoittaa mieli osallistumisestani.,accept
+"sovittu aika sopia mainiosti, tuli mieli paikalle.",accept
+"Ok, hyvä aika!",accept
+sopia loistavasti.,accept
+hyväksyä ajankohdan.,accept
+"Täydellistä, olla paikalla.",accept
+"Hyvä, vuo olla paikka silloin.",accept
+"Mahtavaa, sopia mainiosti.",accept
+vahvistaa osallistua tämä ajankohtaan.,accept
+"Selvä, tuli paikka tuolloin.",accept
+"sopia täydellisesti, kiitos kutsusta.",accept
+tämä aika käydä mainiosti.,accept
+olla iloinen!,accept
+tämä olla mahtavaa!,accept
+Kiitos!,accept
+aikoa olla paikalla!,accept
+Loistavaa!,accept
+kuulostaa hyvältä!,accept
+aikoa olla siellä!,accept
+Ymmärrän!,accept
+Hyvä!,accept
+aikoa olla ajoissa!,accept
+aikoa olla paikka ajoissa!,accept
+Hyväksyn!,accept
+olla valmis!,accept
+ottaa mieli vastaan!,accept
+ymmärtää ja hyväksyn!,accept
+aikoa olla aika paikalla!,accept
+hyväksyä ja mennä sinne!,accept
+minä olla varma aikaa!,accept
+"Hyvä, mennä sinne!",accept
+minä ei olla mikään vastaan!,accept
+vahvistaa,accept
+ei,decline
+ei kyllä,decline
+ei passata,decline
+ei sopia,decline
+ei käydä tuolloin,decline
+minä olla muu meno,decline
+ei sopia,decline
+ei,decline
+ei päästä tuolloin,decline
+ei päästä,decline
+valitettava ei voi osallistua.,decline
+ei pystyä osallistumaan.,decline
+ei voi osallistua tuo päivänä.,decline
+ei pystyä olla paikalla.,decline
+ei olla sopiva tapaamiseen.,decline
+ei olla tarve vapa tuo päivänä.,decline
+ei pystyä olla paikka silloin.,decline
+ei olla saatava tuo päivänä.,decline
+ei pystyä osallistua tapaamiseen.,decline
+ei olla tarve vapa tapaamiseen.,decline
+ei pystyä olla paikka tapaamisessa.,decline
+ei olla sopiva tavata tuo päivänä.,decline
+ei pystyä osallistua silloin.,decline
+ei olla saatava tapaamiseen.,decline
+"ei pystyä olla paikka silloin, valitettavasti.",decline
+ei olla tarve vapa osallistuakseni.,decline
+ei olla sopiva tavata tuo ajankohtana.,decline
+"ei pystyä osallistua silloin, kiitos ymmärryksestäsi.",decline
+"ei olla saatava tuo päivänä, valitettavasti.",decline
+ei olla tarve vapa tavata silloin.,decline
+ei olla sopiva tavata tuo aikana.,decline
+ei pystyä olla paikka tuo päivänä.,decline
+ei olla saatava tavata tuo päivänä.,decline
+"ei pystyä osallistua silloin, kiitos ymmärryksestäsi.",decline
+"ei olla tarve vapa tuo päivänä, valitettavasti.",decline
+ei olla sopiva tavata silloin.,decline
+ei pystyä olla paikka tavata silloin.,decline
+ei olla tarve vapa tavata tuo aikana.,decline
+"ei olla sopiva tavata silloin, kiitos ymmärryksestäsi.",decline
+"ei pystyä olla paikka silloin, valitettavasti.",decline
+ei olla saatava tuo ajankohtana.,decline
+ei pystyä osallistua tavata silloin.,decline
+"ei olla tarve vapa tuo päivänä, kiitos ymmärryksestäsi.",decline
+"ei olla sopiva tavata tuo ajankohtana, valitettavasti.",decline
+"ei pystyä olla paikka silloin, kiitos ymmärryksestäsi.",decline
+ei olla saatava tavata silloin.,decline
+"ei pystyä osallistua tuo päivänä, valitettavasti.",decline
+valitettava minä täytyä kieltäytyä kutsusta.,decline
+"olla pahoillani, mutta ei voi osallistua tämä tilaisuuteen.",decline
+"ei päästä paikalle, se minä olla jo varattu toinen tapaaminen.",decline
+ei valitettava olla vapaa tämä päivänä.,decline
+minä olla liika kiireinen aikataulu tavata osallistuakseni.,decline
+tämä ajankohta ei valitettava sopia minulle.,decline
+ei voi sitoutua tämä tavata juuria nyt.,decline
+"minä olla muu velvollisuuksia, joka estää minä tulemasta.",decline
+"Pahoittelen, mutta minä täytyä perua tapaaminen.",decline
+valitettava ei olla käytettävä tämä aikaan.,decline
+"ei pystyä osallistumaan, se minä olla toinen tavata sama päivänä.",decline
+"olla pahoillani, mutta minä täytyä kieltäytyä kutsumuksesta.",decline
+ei olla saatava tavata tuo päivänä.,decline
+valitettava minä täytyä peruuttaa osallistumiseni.,decline
+ei olla vapaa tämä aikaan.,decline
+tämä ajankohta ei olla minä sopiva.,decline
+"Pahoittelen, mutta minä täytyä kieltäytyä.",decline
+ei pystyä osallistua tämä tapaamiseen.,decline
+valitettava minä olla jo varattu toinen tavata tämä päivälle.,decline
+ei olla saatava tämä aikaan.,decline
+tämä tavata ei sopia minulle.,decline
+"olla pahoillani, mutta minä täytyä kieltäytyä kutsumuksesta.",decline
+ei voi osallistua tämä tilaisuuteen.,decline
+valitettava tämä ajankohta ei olla minä sopiva.,decline
+ei olla käytettävä tavata tämä hetkellä.,decline
+"Pahoittelen, mutta minä täytyä perua tapaaminen.",decline
+tämä aika ei olla minä sopiva.,decline
+ei olla saatava tämä tapaamiseen.,decline
+valitettava ei voi osallistua tämä tilaisuuteen.,decline
+ei pystyä sitoutua tämä tavata juuria nyt.,decline
+"tämä Päivä ei sopia minulle, joten joutua kieltäytyä kutsusta.",decline
+"Anteeksi, mutta minä olla jo suunnitelma kyseinen ajankohtana.",decline
+ei olla valitettava käytettävä silloin.,decline
+"valitettava ei voi osallistua, se minä olla toinen tapaaminen.",decline
+"kiitos kutsusta, mutta ei voi osallistua tämä tapahtumaan.",decline
+"Pahoittelen, mutta minä täytyä kieltäytyä kutsusta.",decline
+"ei voi olla paikalla, koska olla matka tuolloin.",decline
+ei valitettava pystyä osallistua tämä tilaisuuteen.,decline
+ei olla käytettävä kyseinen ajankohtana.,decline
+ei kiitos,decline
+kiitos ei,decline
+ei käydä,decline
+"kiitos kutsusta, ei kuitenkaan käydä",decline
+"olla pahoillani, mutta minä täytyä kieltäytyä kutsu terveydellinen syistä.",decline
+ei olla kiinnostunut,decline
+ei olla saatava,decline
+ei halu,decline
+ei sopiva,decline
+ei tarvita hammastarkastus,decline
+ei tämä hetki sopia,decline
+ei löytää aika,decline
+ei olla varma,decline
+ei olla kiinnostunut tämä,decline
+ei olla kiinnostunut osallistua,decline
+ei olla varma tämä,decline
+ei olla kiinnostunut tämä aihe,decline
+olla liika kiireinen,decline
+"Joo, ei tää aika kyllä sopia",decline
+"ei sovi, miten olla ensi viikko",suggestion
+olla 31.12 vapaa aikoja?,suggestion
+milloin muulloin olla vapaa aikoja?,suggestion
+"ei päästä tuolloin, mitenkäs maanantaina?",suggestion
+olla edeltävä Päivä vapaa aikoja?,suggestion
+valitettava ei voi osallistua 13.2.2023.,suggestion
+vuo ehdotaa toinen ajankohtaa?,suggestion
+"ei voi osallistua tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä olla paikka 13.2.2023, voida sopia toinen ajankohdasta?",suggestion
+"ei olla sopiva tavata 13.2.2023, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä olla paikka silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla saatava tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä osallistua silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla tarve vapa tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei olla sopiva tavata tuo ajankohtana, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä olla paikka tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei olla saatava tavata tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä osallistua silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla tarve vapa tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei olla sopiva tavata silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä olla paikka tavata silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla tarve vapa tavata tuo aikana, voida sopia toinen ajankohdasta?",suggestion
+"ei olla sopiva tavata silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä olla paikka silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla saatava tuo ajankohtana, voida sopia toinen ajankohdasta?",suggestion
+"ei pystyä osallistua tavata silloin, voida sopia toinen ajankohdasta?",suggestion
+"ei olla tarve vapa tuo päivänä, voida sopia toinen ajankohdasta?",suggestion
+"ei sovi, mutta kuinka olla torstai?",suggestion
+olla sinä sopiva torstai kello 14?,suggestion
+"valitettava ei voi osallistua, mutta voida siirtää tavata ensi viikolle?",suggestion
+voida sopia toinen ajankohta tapaamiselle?,suggestion
+milloin muulloin sinä sopisi?,suggestion
+mikä olla sinä hyvä ajankohta?,suggestion
+"ei päästä tuolloin, mutta mitenkäs keskiviikko?",suggestion
+olla seuraava viikko parempi?,suggestion
+voida sopia tavata ensi kuulle?,suggestion
+olla sinä sopiva lauantai?,suggestion
+milloin sinä sopisi?,suggestion
+"valitettava ei voi osallistua 13.2.2023, mutta voida sopia tavata toinen päivälle?",suggestion
+olla jokin toinen Päivä sinä sopiva?,suggestion
+vuo ehdottaa toinen ajankohtaa?,suggestion
+mikä aika sinä sopia paremmin?,suggestion
+olla sinä vapa Päivä ensi viikolla?,suggestion
+mikä ajankohta sopia sinä parhaiten?,suggestion
+"ei voi silloin, mutta voida sopia tavata myöhemmin?",suggestion
+voida löytää hyvä ajankohdan?,suggestion
+olla sinä sopiva perjantai?,suggestion
+olla aamu vai iltapäivä sinä parempi?,suggestion
+"valitettava ei pääse, mutta voida sopia toinen ajan?",suggestion
+mikä aika olla sinä hyvä aika?,suggestion
+voida siirtää tavata seuraava viikolle?,suggestion
+olla jokin toinen Päivä sinä sopiva?,suggestion
+olla sinä sopiva sunnuntai?,suggestion
+milloin sinä olla seuraava vapa hetki?,suggestion
+"valitettava ei voi osallistua, mutta voida löytää uusi ajankohdan?",suggestion
+olla sinä hyvä aika ensi viikolla?,suggestion
+"voida sopia toinen ajan, joka sopia me molemmille?",suggestion
+olla sinä hyvä aamu vai iltapäivä?,suggestion
+olla sinä vapaa aika seuraava viikolle?,suggestion
+mikä aika sinä sopia parhaiten?,suggestion
+"valitettava ei pääse, mutta voida siirtää tavata huomiselle?",suggestion
+olla seuraava kuukausi hyvä ajankohta?,suggestion
+olla sinä sopiva maanantai?,suggestion
+milloin sinä olla vapa hetki tapaamiselle?,suggestion
+"valitettava ei voi osallistua, mutta voida sopia toinen aika huominen",suggestion
+"Pahoittelen, ei päästä silloin. olla mahdollistaa järjestää tavata toinen päivänä?",suggestion
+valitettava tuo Päivä ei sovi. miten olla vaikka seuraava viikko? olla silloin vapaa aikoja?,suggestion
+vuo vaihtaa toinen toimipisteeseen?,suggestion
+vuo tulla seuraava kerta eri hammaslääkärille?,suggestion
+vuo tulla aikaisemmin?,suggestion
+vuo tulla myöhemmin?,suggestion
+olla mahdollistaa vaihtaa toinen päivään?,suggestion
+olla mahdollistaa saada aika aikaisemmin?,suggestion
+olla mahdollistaa saada aika myöhemmin?,suggestion
+voi aika siirtää myöhemmäksi?,suggestion
+voi aika siirtää aikaisemmaksi?,suggestion
+voi aika siirtää toinen viikolle?,suggestion
+olla ilta-aikoja?,suggestion
+olla aika ensi viikonloppuna?,suggestion
+olla aika viikonloppuisin?,suggestion
+voi muuttaa aika toinen toimipisteeseen?,suggestion
+olla mahdollistaa saada aika toinen toimipisteeseen?,suggestion
+olla mahdollistaa vaihtaa aika toinen hammaslääkärille?,suggestion
+olla mahdollistaa tulla seuraava viikonloppuna?,suggestion
+olla mahdollistaa vaihtaa ajankohta sopia minä paremmin?,suggestion
+olla mahdollistaa saada aika toinen viikkoon?,suggestion
+voi muuttaa aika toinen toimipisteeseen?,suggestion
+olla mahdollistaa vaihtaa toinen aikaan?,suggestion
