@@ -64,7 +64,7 @@ def combo():
         else:
             data = {
             "verdict": "-",
-            "class": open_ai_classifier(msg),
+            "class": open_ai_classifier(msg, original_suggestion),
             "classification_probability": "-",
             "probabilities": "-"
         }
@@ -84,7 +84,7 @@ def openai():
     if msg is not None:
         data = {
             "verdict": "-",
-            "class": open_ai_classifier(msg),
+            "class": open_ai_classifier(msg, original_suggestion),
             "classification_probability": "-",
             "probabilities": "-"
         }
