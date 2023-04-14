@@ -1,9 +1,9 @@
 import csv
 import io
 from libvoikko import Voikko
-
+Voikko.setLibrarySearchPath("./Voikko")
 # Initialize the Voikko library for Finnish
-v = Voikko("fi")
+v = Voikko(language="fi", path="./Voikko")
 
 # Open the input and output CSV files
 def database_lemmatization(input_file):
