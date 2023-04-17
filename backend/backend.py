@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flasgger import Swagger
-from open_ai_classifier import open_ai_classifier 
+from open_ai_classifier import open_ai_classifier
+from open_ai_classifier import deduce_time
 from tensorflow_classifier import tensorflow_classifier
 from tensorflow_classifier import tensorflow_test_model 
 from flask_cors import CORS # Handles Cross-Origin Resource Sharing (CORS) errors
@@ -21,9 +22,9 @@ def hello():
 # Endpoint for using TensorFlow classifier
 @app.route("/classify-1", methods=['POST'])
 def tensorflow():
-    # Retrieving message from the JSON payload received in the request
-    msg = request.get_json()['message'] #This receives JSON format
-
+    body = request.get_json()
+    msg = body['message']
+    original_suggestion = body['suggestion']
     if msg is not None:
         # Running TensorFlow test model on message with a hard-coded probability margin of 0.2
         knowledge = tensorflow_test_model(msg, 0.2)
@@ -43,8 +44,11 @@ def tensorflow():
             "classification_probability": str(round(percent, 2)),
             "probabilities": probs
         }
-
-        # Returning classification results as a JSON object
+        # deduce time if classification is suggestion
+        if data['class'] == 'suggestion':
+            time = deduce_time(msg, original_suggestion)
+            data['time'] = time
+            
         return jsonify(data)
     else:
         return "No message provided"
@@ -52,9 +56,9 @@ def tensorflow():
 # Endpoint for using a combination of TensorFlow and OpenAI classifiers
 @app.route("/classify-2", methods=['GET', 'POST'])
 def combo():
-    # Retrieving message from the JSON payload received in the request
-    msg = request.get_json()['message'] #This receives JSON format
-
+    body = request.get_json()
+    msg = body['message']
+    original_suggestion = body['suggestion']
     if msg is not None:
         # Running TensorFlow test model on message with a hard-coded probability margin of 0.2
         knowledge = tensorflow_test_model(msg, 0.2)
@@ -78,12 +82,16 @@ def combo():
         else:
             data = {
             "verdict": "-",
-            "class": open_ai_classifier(msg),
+            "class": open_ai_classifier(msg, original_suggestion),
             "classification_probability": "-",
             "probabilities": "-"
         }
-            
-        # Returning classification results as a JSON object
+
+        # deduce time if classification is suggestion
+        if data['class'] == 'suggestion':
+            time = deduce_time(msg, original_suggestion)
+            data['time'] = time
+
         return jsonify(data)
     else:
         return "No message provided"
@@ -91,19 +99,24 @@ def combo():
 # Endpoint for using OpenAI classifier
 @app.route("/classify-3", methods=['GET', 'POST'])
 def openai():
-    # Retrieving message from the JSON payload received in the request
-    msg = request.get_json()['message'] #This receives JSON format
+    body = request.get_json()
+    msg = body['message']
+    original_suggestion = body['suggestion']
 
     if msg is not None:
         # Creating a dictionary containing the classification results and returning it as a JSON object
         data = {
             "verdict": "-",
-            "class": open_ai_classifier(msg),
+            "class": open_ai_classifier(msg, original_suggestion),
             "classification_probability": "-",
             "probabilities": "-"
         }
 
-        # Returning classification results as a JSON object
+        # deduce time if classification is suggestion
+        if data['class'] == 'suggestion':
+            time = deduce_time(msg, original_suggestion)
+            data['time'] = time
+
         return jsonify(data)
     else:
         return "No message provided"
