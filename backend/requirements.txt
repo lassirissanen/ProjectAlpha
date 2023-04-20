@@ -6,3 +6,4 @@ numpy==1.23.5
 scikit-learn==1.2.1
 Flask-cors==3.0.10
 libvoikko==4.3
+flasgger==0.9.5
