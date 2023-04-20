@@ -1,7 +1,7 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
   title: Prototype API
-  version: '1.0'
+  version: "1.0"
   description: Prototype API for classifying text messages
 basePath: /
 tags:
@@ -29,16 +29,21 @@ paths:
       summary: TensorFlow-based classification endpoint
       description: Use this endpoint to classify text messages using a TensorFlow model
       parameters:
-        - name: message
+        - name: body
           in: body
           required: true
-          description: Text message to be classified
+          description: Request body as json
           schema:
             type: object
             properties:
               message:
                 type: string
+                description: The response message to the suggestion
                 example: sopii minulle
+              suggestion:
+                type: string
+                description: The original suggestion for the appointment
+                example: Sinulle on varattu tarkastus 20.4.2023. Sopiiko tämä sinulle?
       responses:
         200:
           description: Returns the classification results for the input text message
@@ -56,30 +61,52 @@ paths:
               classification_probability:
                 type: string
                 description: The probability of the predicted class
-                example: '0.78'
+                example: "0.78"
               probabilities:
                 type: string
                 description: A list of probabilities for all possible classes
-                example: '0.78, 0.1, 0.12'
+                example: "0.78, 0.1, 0.12"
+              time:
+                type: object
+                description: object repsesenting the suggested time in the message (Only exists if classification is "suggestion")
+                properties:
+                  from:
+                    type: string
+                    description: The start of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  to:
+                    type: string
+                    description: The end of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  status:
+                    type: string
+                    description: Shows if the time deduction was succesful success | failed
+                    example: success
 
   /classify-2:
     post:
       tags:
         - Classification
       summary: Combined classification endpoint
-      description: Use this endpoint to classify text messages using a combination of TensorFlow and OpenAI models.
-                   The openai model is used only if tensorflow is under 60% sure.
+      description:
+        Use this endpoint to classify text messages using a combination of TensorFlow and OpenAI models.
+        The openai model is used only if tensorflow is under 60% sure.
       parameters:
-        - name: message
+        - name: body
           in: body
           required: true
-          description: Text message to be classified
+          description: Request body as json
           schema:
             type: object
             properties:
               message:
                 type: string
+                description: The response message to the suggestion
                 example: sopii minulle
+              suggestion:
+                type: string
+                description: The original suggestion for the appointment
+                example: Sinulle on varattu tarkastus 20.4.2023. Sopiiko tämä sinulle?
       responses:
         200:
           description: Returns the classification results for the input text message
@@ -97,11 +124,27 @@ paths:
               classification_probability:
                 type: string
                 description: The probability of the predicted class (TensorFlow)
-                example: '0.78'
+                example: "0.78"
               probabilities:
                 type: string
                 description: A list of probabilities for all possible classes (TensorFlow)
-                example: '0.78, 0.1, 0.12'
+                example: "0.78, 0.1, 0.12"
+              time:
+                type: object
+                description: object repsesenting the suggested time in the message (Only exists if classification is "suggestion")
+                properties:
+                  from:
+                    type: string
+                    description: The start of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  to:
+                    type: string
+                    description: The end of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  status:
+                    type: string
+                    description: Shows if the time deduction was succesful success | failed
+                    example: success
 
   /classify-3:
     post:
@@ -110,18 +153,55 @@ paths:
       summary: OpenAI-based classification endpoint
       description: Use this endpoint to classify text messages using an OpenAI model
       parameters:
-        - name: message
+        - name: body
           in: body
           required: true
-          description: Text message to be classified
+          description: Request body as json
           schema:
             type: object
             properties:
               message:
                 type: string
-                example: Hello, how are you doing?
+                description: The response message to the suggestion
+                example: sopii minulle
+              suggestion:
+                type: string
+                description: The original suggestion for the appointment
+                example: Sinulle on varattu tarkastus 20.4.2023. Sopiiko tämä sinulle?
       responses:
         200:
           description: Returns the classification results for the input text message
           schema:
-           
+            properties:
+              verdict:
+                type: string
+                description: No value in this endpoint
+                example: "-"
+              class:
+                type: string
+                description: The predicted class (OpenAI)
+                example: accept
+              classification_probability:
+                type: string
+                description: No value in this endpoint
+                example: "-"
+              probabilities:
+                type: string
+                description: No value in this endpoint
+                example: "-"
+              time:
+                type: object
+                description: object repsesenting the suggested time in the message (Only exists if classification is "suggestion")
+                properties:
+                  from:
+                    type: string
+                    description: The start of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  to:
+                    type: string
+                    description: The end of the suggested time in the fromat of %d.%m.%Y-%H:%M
+                    example: "01.05.2023-00:00"
+                  status:
+                    type: string
+                    description: Shows if the time deduction was succesful (success | failed)
+                    example: success
