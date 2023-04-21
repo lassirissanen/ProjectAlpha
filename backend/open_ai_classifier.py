@@ -30,6 +30,7 @@ def open_ai_classifier(response_text, original_suggestion):
 
     return 'unknown'
 
+
 '''
 Gets suggested time from response
 
@@ -38,6 +39,8 @@ Gets suggested time from response
 
 @return object like {'from': 'dd.mm.YYYY-hh:mm', 'to': 'dd.mm.YYYY-hh:mm', 'status': 'success | failed' }
 '''
+
+
 def deduce_time(response_text, original_suggestion):
     today = datetime.date.today()
 
@@ -81,7 +84,8 @@ def deduce_time(response_text, original_suggestion):
         [from_time, to_time] = result.split(" to ")
         from_time = from_time.strip()
         to_time = to_time.strip()
-        from_date_obj = datetime.datetime.strptime(from_time, "%d %B %Y, %H:%M")
+        from_date_obj = datetime.datetime.strptime(
+            from_time, "%d %B %Y, %H:%M")
         to_date_obj = datetime.datetime.strptime(to_time, "%d %B %Y, %H:%M")
         suggestion_obj = {
             "from": from_date_obj.strftime("%d.%m.%Y-%H:%M"),
@@ -90,9 +94,10 @@ def deduce_time(response_text, original_suggestion):
         }
         return suggestion_obj
     except:
-        print(f"OpenAI returned unexpected result:'{result}' in open_ai_classifier.getTime")
+        print(
+            f"OpenAI returned unexpected result:'{result}' in open_ai_classifier.getTime")
     return {
         "from": "-",
         "to": "-",
-        "status": "failed" 
+        "status": "failed"
     }
