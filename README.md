@@ -81,3 +81,35 @@ docker run -p 5000:5000 backend
 Swagger dovumentation is in path `/apidocs/#/`
 
 e.g. when run locally: `http://localhost:5000/apidocs/#/`
+
+## Front-end application for testing
+
+### Setup
+
+Move to frontend directory:
+
+```
+cd frontend
+```
+
+In the frontend directory run:
+
+```
+npm install
+```
+
+### Running the frontend application
+
+In the frontend directory run:
+
+```
+npm start
+```
+
+## docker compose
+
+If you want to deploy both frontend and backend using docker, in root directory run:
+
+```
+docker compose up --build
+```
