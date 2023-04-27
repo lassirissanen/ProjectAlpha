@@ -1,7 +1,5 @@
 export const Message = ({message}) => {	
-
-    // the currently logged in user
-
+    
 	function isMessageFromUser() {
         return message.user === "krister";
     }
@@ -14,14 +12,3 @@ export const Message = ({message}) => {
         </div>
 	)
 }
-/**
- * 
- * 	const { user } = null; // the currently logged in user
-	function isMessageFromUser() {
-        return user?.id === message.user_id;
-    }
- */
-
-// ${isMessageFromUser() ? "place-self-end" : "place-self-start"} 
-
-// ${isMessageFromUser() ? "rounded-tr-none" : "rounded-tl-none"}

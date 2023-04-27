@@ -1,5 +1,4 @@
 import { MessageList } from "./MessageList";
-import { SendMessage } from "./SendMessage";
 import { useState } from "react";
 import './MessageList.css';
 
