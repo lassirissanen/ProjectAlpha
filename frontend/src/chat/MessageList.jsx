@@ -10,7 +10,7 @@ export const MessageList = (props) => {
   let nextMondayFormatted = nextMonday.toLocaleDateString('fi-FI', { year: "numeric", month: "2-digit", day: "2-digit"});
   const initialMessage = `Hei! Olemme varanneet sinulle alustavan hammastarkastus ajan ${nextMondayFormatted} klo 12:00. Vastaa 'V' varmistaaksesi ajan`;
 
-  const [messages, setMessages] = useState([{ user: "lassi", message: initialMessage }]);
+  const [messages, setMessages] = useState([{ user: "bot", message: initialMessage }]);
   const [inputStr, setInputStr] = useState("");
   const [verdict, setVerdict] = useState("");
   const [classtype, setClasstype] = useState("");
@@ -24,7 +24,7 @@ export const MessageList = (props) => {
       window.alert("Viestin lähettäminen ei ole mahdollista, sillä viesti on tyhjä. Ole hyvä ja kirjoita viesti ennen sen lähettämistä.");
     }
     else {
-      setMessages(prevMessages => [...prevMessages, { user: "krister", message: inputStr }]);
+      setMessages(prevMessages => [...prevMessages, { user: "customer", message: inputStr }]);
     let response = null;
     // eslint-disable-next-line default-case
     switch (props.endpoint) {
@@ -63,7 +63,7 @@ export const MessageList = (props) => {
     setInputStr("");
     const time = response['time'];
     let suggestedTime = time ? `${time.from} - ${time.to}`: '';
-    setMessages(prevMessages => [...prevMessages, { user: "lassi", message: response["class"] + ' ' + suggestedTime }]);
+    setMessages(prevMessages => [...prevMessages, { user: "bot", message: response["class"] + ' ' + suggestedTime }]);
     }
   }
   const handleInput = event => {

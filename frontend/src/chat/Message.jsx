@@ -1,7 +1,7 @@
 export const Message = ({message}) => {	
     
 	function isMessageFromUser() {
-        return message.user === "krister";
+        return message.user === "customer";
     }
 
 	return (
