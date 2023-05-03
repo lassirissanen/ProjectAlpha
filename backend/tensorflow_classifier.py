@@ -17,12 +17,10 @@ from keras.models import Sequential
 from keras.layers import Embedding, LSTM, Dense, Dropout
 
 # lemmatizer import
-from lemmatizer import database_lemmatization, response_lemmatization
+from lemmatizer import response_lemmatization
 
 df = pd.read_csv("responses.csv")
 df["response"] = [response_lemmatization(res) for res in df["response"]]
-#df["label"] = df["class"].map({"decline": 0, "accept": 1, "suggestion": 2})
-#df = df.drop(["class"], axis=1)
 
 TEST_SPLIT = 0.1
 RANDOM_STATE = 10
